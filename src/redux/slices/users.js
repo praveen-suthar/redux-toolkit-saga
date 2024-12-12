@@ -23,14 +23,8 @@ const users = createSlice({
       )
       return state
     },
-    // deleteUsersSlice: (state, action) => {
-    //   state = state.filter((item) =>
-    //     item.id !== action.payload)
-    //   return state
-    // },
     deleteUsersSlice: (state, action) => {
       state = state.filter((item) => {
-        console.log("ID", JSON.stringify(item.id),"action.payload",  JSON.stringify(action.payload))
         return item.id !== action.payload   
       })
     },
